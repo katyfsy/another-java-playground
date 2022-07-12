@@ -1,13 +1,20 @@
 package com.galvanize;
 
 public class Application {
+
+    public static String FizzBuzz(String string) {
+        int integer = Integer.parseInt(string);
+        if (integer % 3 == 0 & integer % 5 == 0) {
+            return "FizzBuzz";
+        } else if (integer % 3 == 0) {
+            return "Fizz";
+        } else if (integer % 5 == 0) {
+            return "Buzz";
+        } else {
+            return string;
+        }
+    }
     public static void main(String[] args) {
-       if (args.length < 1) {
-           System.out.println("Please specify a name and email");
-       } else if (args.length == 1) {
-           System.out.println("Please specify an email for " + args[0]);
-       } else {
-           System.out.println(args[0] + " <" + args[1] + ">");
-       }
+        System.out.println(FizzBuzz(args[0]));
     }
 }
