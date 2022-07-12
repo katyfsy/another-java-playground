@@ -4,7 +4,7 @@ public class Application {
 
     public static String FizzBuzz(String string) {
         int integer = Integer.parseInt(string);
-        if (integer % 3 == 0 & integer % 5 == 0) {
+        if (integer % 3 == 0 && integer % 5 == 0) {
             return "FizzBuzz";
         } else if (integer % 3 == 0) {
             return "Fizz";
