@@ -12,6 +12,11 @@ public class Marker {
     private boolean isCapped = true;
     private float inkLevel = 1.0f;
 
+    public Marker(boolean isCapped, float inkLevel) {
+        this.isCapped = isCapped;
+        this.inkLevel = inkLevel;
+    }
+
     void write(String letters) {
         inkLevel -= letters.length() * 0.05f;
     }
