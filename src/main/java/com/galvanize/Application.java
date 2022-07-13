@@ -1,14 +1,28 @@
 package com.galvanize;
 
-import java.util.Arrays;
+import java.util.ArrayList;
+import java.util.List;
 
+interface Animal {
+
+}
+class Person implements Animal {
+    https://gitlab.com/katyfsy
+}
 public class Application {
     public static void main(String[] args) {
-      BetterList list = new BetterList(Arrays.asList("eliza", "angelica", "alexander"));
-      System.out.println(list.join(",", 2));
+        Person person = new Person();
+        System.out.println(person.toString());
 
-      BetterList list2 = new BetterList(Arrays.asList("eliza"));
-      System.out.println(list2.join(",", 2));
+        System.out.println(person instanceof Person);//return true
+        System.out.println(person instanceof Object);//return true
 
+        Object o = new Object();
+        System.out.println(o instanceof Person);//return false
+
+        System.out.println(person instanceof Animal);//return true
+
+        ArrayList<String> list = new ArrayList<>();
+        System.out.println(list instanceof List);//return true
     }
 }
